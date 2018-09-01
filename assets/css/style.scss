@@ -1,0 +1,24 @@
+---
+---
+
+@import '{{ site.theme }}';
+
+.social-links {
+	float: right;
+	& > a {
+		color: white;
+		font-size: 1.5em;
+		&:hover {
+			text-decoration: none;
+		}
+		&.rss:hover {
+			color: 	#f26522;
+		}
+		&.twitter:hover {
+			color: #00aced;
+		}
+		&.github:hover {
+			color: black;
+		}
+	}
+}
