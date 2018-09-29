@@ -28,6 +28,11 @@ markdown: kramdown
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed
+defaults:
+  - scope:
+      path: "assets/img"
+    values:
+      images: true
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
