@@ -3,6 +3,11 @@
 
 @import '{{ site.theme }}';
 
+hr {
+	background-image: linear-gradient(to right, rgba(50, 50, 50, 0), rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0));
+	margin-bottom: 20px;
+}
+
 .social-links {
 	float: right;
 	& > a {
@@ -32,4 +37,26 @@
 	& > i {
 		margin-right: 10px;
 	}
+}
+
+.dt-published {
+	font-style: italic;
+	padding-left: 10px;
+}
+
+.post-content {
+	padding-top: 30px;
+}
+
+.center-image {
+	margin: auto;
+	display: block;
+}
+
+.caption {
+	font-style: italic;
+	font-size: 0.9em;
+	text-align: center;
+	margin-bottom: 1.5em !important;
+
 }
