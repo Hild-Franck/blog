@@ -59,4 +59,13 @@ Il y a deux cas qui se presentent souvent :
         fi
         ```
 
+
+Test
+
+{: .test}
 > **ATTENTION :** Certaines commande affichent des informations dans stderr, comme `curl`
+> ```bash
+>    if [[ -n "$err" ]]; then
+>        echo "[ERROR] $err"
+>    fi
+> ```
