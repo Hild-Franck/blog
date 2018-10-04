@@ -1,7 +1,7 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import '{{ site.theme }}';
 
 hr {
 	background-image: linear-gradient(to right, rgba(50, 50, 50, 0), rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0));
@@ -59,10 +59,4 @@ hr {
 	text-align: center;
 	margin-bottom: 1.5em !important;
 
-}
-
-.test {
-	color: #c0392b !important;
-	border-color: #c0392b !important;
-	background-color: rgba(231, 76, 60, 0.1) !important;
 }
