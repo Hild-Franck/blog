@@ -2,7 +2,7 @@
 layout: post
 title: "Astrophotographie: Le premier essai !"
 date: 2018-10-27
-categories: irl photos
+categories: irl photos astronomie
 author: Knarfux
 ---
 
