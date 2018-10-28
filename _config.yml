@@ -24,7 +24,7 @@ twitter_username: Knarfux
 github_username:  Hild-Franck
 
 # Build settings
-markdown: kramdown
+markdown: MyFancyMarkdown
 theme: jekyll-theme-cayman
 plugins:
   - jekyll-feed

@@ -8,6 +8,24 @@ hr {
 	margin-bottom: 20px;
 }
 
+figcaption {
+	font-style: italic;
+	font-size: 0.9em;
+	text-align: center;
+	padding: 5px;
+	border: 1px lightgray solid;
+}
+
+figure {
+	max-width: 600px;
+	margin: auto;
+	margin-bottom: 80px;
+
+	& > img {
+		vertical-align: middle;
+	}
+}
+
 .social-links {
 	float: right;
 	& > a {
@@ -51,12 +69,4 @@ hr {
 .center-image {
 	margin: auto;
 	display: block;
-}
-
-.caption {
-	font-style: italic;
-	font-size: 0.9em;
-	text-align: center;
-	margin-bottom: 1.5em !important;
-
 }
