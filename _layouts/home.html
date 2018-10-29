@@ -14,12 +14,12 @@ layout: default
     <ul class="post-list">
       {%- for post in site.posts -%}
       <li>
-        <span class="post-meta">{% include date.html date=post.date %}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
+        <span class="post-meta"><strong>{% include date.html date=post.date %}</strong> • {{post.author}}</span>
         {%- if site.show_excerpts -%}
           {{ post.excerpt }}
         {%- endif -%}
