@@ -15,10 +15,10 @@ script:
   - bundle exec rake test
 before_deploy:
   - openssl aes-256-cbc -K $encrypted_470b63517309_key -iv $encrypted_470b63517309_iv
-    -in deploy_blog_rsa.enc -out ~\/.ssh/deploy_blog_rsa -d
+    -in deploy_blog_rsa.enc -out /tmp/deploy_blog_rsa -d
   - eval "$(ssh-agent -s)"
-  - chmod 600 /tmp/deploy\_blog\_rsa
-  - ssh-add /tmp/deploy\_blog\_rsa
+  - chmod 600 /tmp/deploy_blog_rsa
+  - ssh-add /tmp/deploy_blog_rsa
   - echo -e "Host $DEPLOY_HOST\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 deploy:
   provider: script
