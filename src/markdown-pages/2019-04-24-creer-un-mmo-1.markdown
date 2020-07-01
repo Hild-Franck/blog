@@ -4,6 +4,7 @@ title: "Créer un MMO ? #1 - Nouvelle authentification"
 date: 2019-04-26
 categories: project dev
 author: Knarfux
+image: ../../img/profile.png
 ---
 
 J'ai essayé de me remettre **doucement** dans le projet par commençant par la partie *authentication*.

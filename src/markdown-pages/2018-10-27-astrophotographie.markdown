@@ -4,6 +4,7 @@ title: "Astrophotographie: Le premier essai !"
 date: 2018-10-27
 categories: irl photos astronomie
 author: Knarfux
+image: ../../img/profile.png
 ---
 
 Etant l'heureux propriétaire d'un téléscope (de type Newton), j'ai decidé qu'il était grand temps de prendre des photos de ce que j'observais. J'ai donc acheté un adaptateur téléscope-smartphone et j'ai tenté de prendre des photos de la lune !

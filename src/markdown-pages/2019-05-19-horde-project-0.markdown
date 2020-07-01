@@ -4,6 +4,7 @@ title: "Horde Project #0 - On recommence !"
 date: 2019-05-19
 categories: project gamedev
 author: Knarfux
+image: ../../img/profile.png
 ---
 
 Voila le second projet sur lequel j'aime bosser en ce moment. Avec le projet de MMO, ce sont les deux seuls projets sur lesquels j'essaie de me focaliser.
