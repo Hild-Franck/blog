@@ -4,7 +4,6 @@ title:  "La renaissance du canard (les phoenixs sont surcotés)"
 date:   2018-09-02
 categories: blog update
 author: Knarfux
-image: ../../img/profile.png
 ---
 Techniquement, c'est une re-re-re-renaissance, puisque j'ai tenté de relancer ce blog une bonne centaine de fois, mais ma légendaire propension à ne pas finir la **MOINDRE** chose que j'entreprend finis par prendre le dessus.
 

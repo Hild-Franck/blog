@@ -4,7 +4,6 @@ title: "Créer un MMO ? #0 - Au commencement"
 date: 2019-04-16
 categories: project dev
 author: Knarfux
-image: ../../img/profile.png
 ---
 Il y a de cela *MILLE LUNES*, un jeune développeur incapable de finir le **moindre** projet se mit en tête d'un commencer un bien plus ambitieux que tous les autres : développer un MMO.
 

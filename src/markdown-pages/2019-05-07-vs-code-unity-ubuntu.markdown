@@ -4,7 +4,6 @@ title: "Configurer VSCode pour Unity3D sur Ubuntu"
 date: 2019-05-07
 categories: tuto gamedev
 author: Knarfux
-image: ../../img/profile.png
 ---
 
 Cela fait quelques années que je travaille avec un ordinateur portable avec **Ubuntu** pré-installer dessus.

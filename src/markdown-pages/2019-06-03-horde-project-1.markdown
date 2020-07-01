@@ -4,7 +4,6 @@ title: "Horde Project #1 - Rampe et destruction"
 date: 2019-06-03
 categories: project gamedev update
 author: Knarfux
-image: ../../img/profile.png
 ---
 
 Je n'ai pas eu autant de temps libre que ce que j'aurais voulu pour bosser sur ce projet, alors ça sera **une mini update** pour cette fois !

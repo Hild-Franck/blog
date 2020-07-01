@@ -4,7 +4,6 @@ title: "Le projet Hordes"
 date: 2018-09-29
 categories: projects gamedev update
 author: Knarfux
-image: ../../img/profile.png
 ---
 Il y a un petit moment de ça, j'ai commencé **un projet de jeu** qui me trottait dans la tête depuis longtemps. Etant friand de jeux de horde, j'ai toujours été pas mal frustré de voir le genre aussi peu representé.
 

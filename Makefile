@@ -1,2 +1,3 @@
-runlocal:
-	docker run --rm -p 4000:4000 -p 3000:3000 -v="$$PWD:/srv/jekyll" jekyll/jekyll:3.8 jekyll serve --watch --livereload --livereload_port 3000
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7ccb082f8adbff2ac4d70410947715f92e773e1c5538f40d1f0ee4590b4bad3
+size 150
