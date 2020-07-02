@@ -8,20 +8,8 @@ import { makeStyles } from '@material-ui/core/styles'
 import Layout from '../components/Layout'
 
 const useStyles = makeStyles({
-  main: {
-    maxWidth: 1280,
-    margin: "auto",
-    padding: 50
-  },
-  header: {
-    height: 200,
-    marginBottom: 25
-  },
-  gridHeader: {
-    height: "100%",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center"
+  title: {
+    marginBottom: 75
   }
 })
 
@@ -30,7 +18,7 @@ export default function BlogPost({ data }) {
   const post = data.markdownRemark
 
   return <Layout images={data.normal}>
-    <Typography variant="h4" align="center" display="block">
+    <Typography className={classes.title} variant="h4" align="center" display="block">
       {post.frontmatter.title}
     </Typography>
     <div dangerouslySetInnerHTML={{ __html: post.html }} />
