@@ -14,11 +14,21 @@ const useStyles = makeStyles({
     minWidth: 275,
     margin: '20px'
   },
-  content: {
-    height: "100%"
+  date: {
+    position: "absolute",
+    bottom: 5,
+    right: 5
   },
-  categories: {
-    paddingBottom: 10,
+  content: {
+    height: "100%",
+    position: "relative",
+    paddingBottom: 15
+  },
+  categoryContainer: {
+    paddingBottom: 15,
+  },
+  category: {
+    marginRight: 15
   },
   image: {
     height: 140
@@ -29,11 +39,18 @@ const PostCard = ({ post }) => {
   const classes = useStyles()
   return <Grid item xs md={3} component={Card} className={classes.root}>
     <CardActionArea className={classes.content} component={Link} to={post.fields.slug}>
+      <Typography className={classes.date} variant="subtitle2" color="textSecondary">
+        {post.frontmatter.date}
+      </Typography>
       <CardMedia className={classes.image} component={Img} fluid={post.frontmatter.image.childImageSharp.fluid} />
       <CardContent>
-        <Typography className={classes.categories} variant="button" color="textSecondary" component="h2">
-        {post.frontmatter.categories}
-        </Typography>
+        <div className={classes.categoryContainer}>
+          {post.frontmatter.categories.split(" ").map(category =>
+            <Typography className={classes.category} variant="button" color="textSecondary" component="span">
+              {category}
+            </Typography>
+          )}
+        </div>
         <Typography variant="h5" component="h2">
           {post.frontmatter.title}
         </Typography>

@@ -5,19 +5,11 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import { makeStyles, withStyles } from '@material-ui/core/styles'
-
-const GlobalCss = withStyles(theme => ({
-  '@global': {
-    'strong, b': {
-      color: theme.palette.secondary.dark
-    }
-  }
-}))(() => null)
+import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles({
   main: {
-    maxWidth: 1100,
+    maxWidth: 1280,
     margin: "auto",
     padding: 45
   },
@@ -46,26 +38,14 @@ const Layout = ({ children, images }) => {
   const classes = useStyles()
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const theme = React.useMemo(() =>
-    createMuiTheme({
-      palette: {
+    createMuiTheme({ palette: {
         type: prefersDarkMode ? 'dark' : 'light',
-      },
-      typography: {
-        body2: {
-          fontSize: "1rem"
-        },
-        h4: {
-          fontWeight: "bold"
-        }
-      }
-    }),
+      } }),
     [prefersDarkMode]
   )
 
-
   return <ThemeProvider theme={theme}>
     <CssBaseline/>
-    <GlobalCss />
     <Box className={classes.header} boxShadow={3}>
       <img className={classes.headerImage} src={images.childImageSharp.fluid.src} />
       <Grid container className={classes.gridHeader}>
