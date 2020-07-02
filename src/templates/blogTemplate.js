@@ -1,14 +1,48 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Box from '@material-ui/core/Box'
-import Grid from '@material-ui/core/Grid'
 import Link from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
+import Table from '@material-ui/core/Table'
+import TableContainer from '@material-ui/core/TableContainer'
+import TableHead from '@material-ui/core/TableHead'
+import TableRow from '@material-ui/core/TableRow'
+import TableCell from '@material-ui/core/TableCell'
+import TableBody from '@material-ui/core/TableBody'
+import Paper from '@material-ui/core/Paper'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import Highlight, { defaultProps } from 'prism-react-renderer'
 
 import Layout from '../components/Layout'
+
+const pre = props => {
+  const className = props.children.props.className || ''
+  const matches = className.match(/language-(?<lang>.*)/)
+  return (
+    <Highlight
+      {...defaultProps}
+      code={props.children.props.children}
+      language={
+        matches && matches.groups && matches.groups.lang
+          ? matches.groups.lang
+          : ''
+      }
+    >
+      {({ className, style, tokens, getLineProps, getTokenProps }) => (
+        <pre className={className} style={style}>
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: i })}>
+              {line.map((token, key) => (
+                <span {...getTokenProps({ token, key })} />
+              ))}
+            </div>
+          ))}
+        </pre>
+      )}
+    </Highlight>
+  )
+}
 
 const useStyles = makeStyles({
   title: {
@@ -26,6 +60,12 @@ const PostCss = withStyles(theme => ({
       marginTop: 30,
       fontWeight: "bold"
     },
+    '.MuiTableCell-head': {
+      fontWeight: "bold"
+    },
+    '.MuiTableContainer-root': {
+      marginTop: 45
+    }
   }
 }))(() => null)
 
@@ -36,7 +76,14 @@ export default function BlogPost({ data }) {
   return <MDXProvider components={{
     a: Link,
     h2: props => <Typography {...props} variant="h5" component="h3" />,
-    h3: props => <Typography {...props} variant="h6" component="h4" />
+    h3: props => <Typography {...props} variant="h6" component="h4" />,
+    th: props => <TableCell {...props} />,
+    td: props => <TableCell {...props} />,
+    tr: props => <TableRow {...props} />,
+    tbody: props => <TableBody {...props} />,
+    thead: props => <TableHead {...props} />,
+    table: props => <TableContainer component={Paper}><Table {...props} /></TableContainer>,
+    pre
   }}><Layout images={data.normal}>
     <PostCss />
     <Typography className={classes.title} variant="h4" align="center" display="block">

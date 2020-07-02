@@ -45,8 +45,7 @@ Il y a deux cas qui se presentent souvent :
 
 - Simplement catch une erreur
 
-    1. Executer la commande en subshell, rediriger `stdout` dans `/dev/null` et `stderr` dans `stdout`
-
+    1. Executer la commande en subshell, rediriger `stdout` dans `/dev/null` et `stderr` dans `stdout`.
 
         ```bash
         err=$({mkdir /my/folder > /dev/null;} 2>&1)

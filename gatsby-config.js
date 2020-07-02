@@ -16,6 +16,7 @@ module.exports = {
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-remark-prismjs`,
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

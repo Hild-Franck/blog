@@ -20,6 +20,9 @@ const GlobalCss = withStyles(theme => ({
       marginTop: 30,
       fontWeight: "bold"
     },
+    '.MuiTableCell-head': {
+      fontWeight: "bold"
+    }
   }
 }))(() => null)
 
