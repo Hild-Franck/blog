@@ -5,13 +5,21 @@ import useMediaQuery from '@material-ui/core/useMediaQuery'
 import Box from '@material-ui/core/Box'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
+import Link from '@material-ui/core/Link'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 
 const GlobalCss = withStyles(theme => ({
   '@global': {
     'strong, b': {
       color: theme.palette.secondary.dark
-    }
+    },
+    '.MuiTypography-h5': {
+      fontWeight: "bold"
+    },
+    '.MuiTypography-h6': {
+      marginTop: 30,
+      fontWeight: "bold"
+    },
   }
 }))(() => null)
 

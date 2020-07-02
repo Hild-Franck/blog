@@ -8,7 +8,7 @@ import Layout from '../components/Layout'
 
 
 const IndexPage = ({ data }) => {
-  const { allMarkdownRemark: { edges } } = data
+  const { allMdx: { edges } } = data
   const Posts = edges.map(edge => <PostCard post={edge.node} />)
 
   return <Layout images={data.normal}>
@@ -28,7 +28,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
+    allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           id
