@@ -1,4 +1,7 @@
 module.exports = {
+  siteMetadata: {
+    siteUrl: `knarfux.fr`
+  },
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -14,6 +17,7 @@ module.exports = {
         name: `img`,
       },
     },
+    `gatsby-plugin-feed`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-remark-prismjs`,
