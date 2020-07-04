@@ -1,7 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Link from '@material-ui/core/Link'
+import { Link } from "gatsby"
+import MaterialLink from '@material-ui/core/Link'
 import Typography from '@material-ui/core/Typography'
+import Breadcrumbs from '@material-ui/core/Breadcrumbs'
 import Table from '@material-ui/core/Table'
 import TableContainer from '@material-ui/core/TableContainer'
 import TableHead from '@material-ui/core/TableHead'
@@ -9,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow'
 import TableCell from '@material-ui/core/TableCell'
 import TableBody from '@material-ui/core/TableBody'
 import Paper from '@material-ui/core/Paper'
+import HomeIcon from '@material-ui/icons/Home'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import { MDXProvider } from "@mdx-js/react"
 import { MDXRenderer } from "gatsby-plugin-mdx"
@@ -46,7 +49,16 @@ const pre = props => {
 
 const useStyles = makeStyles({
   title: {
-    marginBottom: 75
+    marginBottom: 75,
+    marginTop: 25
+  },
+  link: {
+    display: 'flex',
+  },
+  icon: {
+    marginRight: 5,
+    width: 20,
+    height: 20,
   }
 })
 
@@ -74,7 +86,7 @@ export default function BlogPost({ data }) {
   const post = data.mdx
 
   return <MDXProvider components={{
-    a: Link,
+    a: MaterialLink,
     h2: props => <Typography {...props} variant="h5" component="h3" />,
     h3: props => <Typography {...props} variant="h6" component="h4" />,
     th: props => <TableCell {...props} />,
@@ -86,6 +98,15 @@ export default function BlogPost({ data }) {
     pre
   }}><Layout images={data.normal}>
     <PostCss />
+    <Breadcrumbs aria-label="breadcrumb">
+      <MaterialLink component={Link} color="inherit" to="/" className={classes.link}>
+        <HomeIcon className={classes.icon} />
+        Home
+      </MaterialLink>
+      <Typography color="inherit" href="/getting-started/installation/">
+        {post.frontmatter.title}
+      </Typography>
+    </Breadcrumbs>
     <Typography className={classes.title} variant="h4" align="center" display="block">
       {post.frontmatter.title}
     </Typography>
