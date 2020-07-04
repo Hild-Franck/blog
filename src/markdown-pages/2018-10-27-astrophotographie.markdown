@@ -19,11 +19,11 @@ Etant l'heureux propriétaire d'un téléscope (de type Newton), j'ai decidé qu
 
 Le résultat n'est pas parfait, mais c'est parce que j'ai fait quelques erreurs de debutant.
 
-![png](/assets/img/tycho.png "La partie la plus sombre est la Mer des Nuées. Le cratère bien defini avec un "point" en son centre, en haut a droite de la Mer des Nuées, est le cratère Tycho."){: .center-image}
+![png](../../img/tycho.png "La partie la plus sombre est la Mer des Nuées. Le cratère bien defini avec un "point" en son centre, en haut a droite de la Mer des Nuées, est le cratère Tycho.")
 
-![png](/assets/img/mer_nuees.png "Le terminateur de la lune"){: .center-image}
+![png](../../img/mer_nuees.png "Le terminateur de la lune")
 
-![png](/assets/img/mer_humeurs.png "La Mer des Humeurs, au dessus du grand cratère Gassendi. On peut également voir le cratère Bullialdus au centre de la Mer des Nuées."){: .center-image}
+![png](../../img/mer_humeurs.png "La Mer des Humeurs, au dessus du grand cratère Gassendi. On peut également voir le cratère Bullialdus au centre de la Mer des Nuées.")
 
 ## Les erreurs
 

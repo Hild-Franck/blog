@@ -24,7 +24,7 @@ J'ai un peu *anticipé* sur ce coup là. J'ai ajouté une fonction à déclenche
 
 **C'est très basique** ; un petit effet de particule, et le mesh est remplacé par une version endommagée, dont le haut se détache avec la physique activée.
 
-![gif](/assets/img/horde_2019-06-03_destruction.gif)
+![gif](../../img/horde_2019-06-03_destruction.gif)
 
 Le rendu est **loin d’être parfait**, mais ça fait le taf pour un proto !
 
@@ -34,7 +34,7 @@ Avant de passer à la phase *action* du gameplay, il y avait un bâtiment que je
 
 Honnêtement, j'avais pas des masses d’idées alors j'ai fais un mesh très fonctionnel.
 
-![gif](/assets/img/horde_2019-06-03_rampe.gif)
+![gif](../../img/horde_2019-06-03_rampe.gif)
 
 Pour éviter de futurs abus, j'ai fait en sorte que les rampes ne puissent se placer *que* contre un mur. Et pour enlever le haut des pics au moment du placement de la rampe, je remplace simplement le mesh du pic par le mesh du pic *cassé* sans la pointe (manière de pas créer un mesh juste pour ça)
 

@@ -37,25 +37,17 @@ J'ai donc decidé de recommencer de zéro, en refaisant un prototype bien plus t
 
 Dans le premier prototype, les murs étaient de vulgaires cubes gris composés de cylindres. Difficile de se projeter dans le jeu avec ce genre de graphismes. Ces "cubes" se plaçaient un par un.
 
-![gif](/assets/img/2018-09-29_17-41-24.gif){: .center-image}
+![gif](../../img/2018-09-29_17-41-24.gif "Oui, on est clairement sur de l'abstrait tendance moche")
 
-{: .caption}
-Oui, on est clairement sur de l'abstrait tendance moche
 
 J'ai donc réfléchis à un nouveau système de placement, plus proche de certains RTS en faisant en sorte de pouvoir construire des tronçons entier de murs de maniere plus rapide.
 
-![gif](/assets/img/2018-09-16_14-32-13.gif){: .center-image}
-
-{: .caption}
-Test du systeme de placement
+![gif](../../img/2018-09-16_14-32-13.gif "Test du systeme de placement")
 
 Puis, pour enlever le coté un peu trop "abstrait" des murs du premier prototype, j'ai modelisé grossièrement les tronçons de mur et les ai colorisés.
 De plus, un "ghost" permet aussi de previsualiser le futur placement du mur, changeant de couleur selon si la construction est autorisée ou non.
 
-![gif](/assets/img/2018-09-18_15-45-31.gif){: .center-image}
-
-{: .caption}
-Placement des murs avec le mesh sans texture et le ghost de prévisualisation
+![gif](../../img/2018-09-18_15-45-31.gif "Placement des murs avec le mesh sans texture et le ghost de prévisualisation")
 
 J'ai également implémenté un escalier afin de pouvoir accéder aux plateformes des murs. L'idée est que, lors de la seconde phase, le personnage pourra patrouiller et tirer (si il possède une classe distance) depuis les remparts. Le joueur pourra également placer des archers / magiciens sur ces plateformes.
 

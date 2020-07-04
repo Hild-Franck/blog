@@ -27,7 +27,7 @@ J’écris ce post alors que je viens de finir la *première* (et seule) feature
 
 Bon, c'est pas très parlant dit comme ça, alors mieux vaut *montrer* la feature en question, pas vrai ?
 
-![gif](/assets/img/horde_2019-05-19_wall.gif)
+![gif](../../img/horde_2019-05-19_wall.gif)
 
 Passons en revue ce que j'ai implémenté:
 

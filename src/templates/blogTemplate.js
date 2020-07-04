@@ -77,6 +77,20 @@ const PostCss = withStyles(theme => ({
     },
     '.MuiTableContainer-root': {
       marginTop: 45
+    },
+    '.gatsby-resp-image-figcaption': {
+      maxWidth: 600,
+      display: "block",
+      margin: "auto",
+      textAlign: "center",
+      border: "solid 1px black",
+      padding: 5,
+    },
+    'figcaption': theme.typography.subtitle2,
+    'img': {
+      display: 'block',
+      maxWidth: 600,
+      margin: 'auto'
     }
   }
 }))(() => null)
@@ -86,6 +100,16 @@ export default function BlogPost({ data }) {
   const post = data.mdx
 
   return <MDXProvider components={{
+    img: props => props.className == 'gatsby-resp-image-image'
+      ? <img {...props} />
+      : <figure>
+        <span style={{position: "relative", display: "block", margin: "auto", maxWidth: 600}}>
+          <MaterialLink href={props.src} target="_blank">
+            <img {...props} />
+          </MaterialLink>
+        </span>
+        {props.title && <figcaption class="gatsby-resp-image-figcaption">{props.title}</figcaption>}
+      </figure>,
     a: MaterialLink,
     h2: props => <Typography {...props} variant="h5" component="h3" />,
     h3: props => <Typography {...props} variant="h6" component="h4" />,
