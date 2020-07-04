@@ -86,7 +86,6 @@ const PostCss = withStyles(theme => ({
       border: "solid 1px black",
       padding: 5,
     },
-    'figcaption': theme.typography.subtitle2,
     'img': {
       display: 'block',
       maxWidth: 600,

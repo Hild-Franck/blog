@@ -24,6 +24,14 @@ module.exports = {
     `gatsby-remark-prismjs`,
     `gatsby-remark-images`,
     {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-feed-mdx`,
       options: {
         query: `
@@ -72,11 +80,6 @@ module.exports = {
             `,
             output: "/rss.xml",
             title: "Your Site's RSS Feed",
-            // optional configuration to insert feed reference in pages:
-            // if `string` is used, it will be used to create RegExp and then test if pathname of
-            // current page satisfied this regular expression;
-            // if not provided or `undefined`, all pages will have feed reference inserted
-            match: "^/blog/"
           }
         ]
       }
@@ -96,8 +99,6 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 1200,
-              showCaptions: ['title', 'alt'],
-              markdownCaptions: true
             },
           },
         ],
