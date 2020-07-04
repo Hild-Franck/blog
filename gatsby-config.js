@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `knarfux.fr`
+    siteUrl: `http://knarfux.fr`
   },
   plugins: [
     {
