@@ -8,8 +8,12 @@ import Layout from '../components/Layout'
 
 
 const IndexPage = ({ data }) => {
-  const { allMdx: { edges } } = data
-  const Posts = edges.map(edge => <PostCard post={edge.node} />)
+  const { allMdx: { edges, nodes } } = data
+  
+  const Posts = edges.map((edge, i) => {
+    const { image } = nodes[i]
+    return <PostCard image={image} post={edge.node} />
+  })
 
   return <Layout images={data.normal}>
     <Grid container justify="space-evenly" alignItems="stretch">{Posts}</Grid>
@@ -29,8 +33,24 @@ export const pageQuery = graphql`
       }
     }
     allMdx(sort: { order: DESC, fields: [frontmatter___date] }) {
+      nodes {
+        image {
+          childImageSharp {
+            fluid {
+              src
+            }
+          }
+        }
+      }
       edges {
         node {
+          image {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
           id
           excerpt(pruneLength: 250)
           frontmatter {

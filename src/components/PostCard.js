@@ -35,14 +35,16 @@ const useStyles = makeStyles({
   },
 })
 
-const PostCard = ({ post }) => {
+const PostCard = ({ post, image }) => {
+  image = image || post.frontmatter.image
+  
   const classes = useStyles()
   return <Grid item xs md={3} component={Card} className={classes.root}>
     <CardActionArea className={classes.content} component={Link} to={post.fields.slug}>
       <Typography className={classes.date} variant="subtitle2" color="textSecondary">
         {post.frontmatter.date}
       </Typography>
-      <CardMedia className={classes.image} component={Img} fluid={post.frontmatter.image.childImageSharp.fluid} />
+      <CardMedia className={classes.image} component={Img} fluid={image.childImageSharp.fluid} />
       <CardContent>
         <div className={classes.categoryContainer}>
           {post.frontmatter.categories.split(" ").map(category =>

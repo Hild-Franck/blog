@@ -11,6 +11,7 @@ import TableRow from '@material-ui/core/TableRow'
 import TableCell from '@material-ui/core/TableCell'
 import TableBody from '@material-ui/core/TableBody'
 import Paper from '@material-ui/core/Paper'
+import Container from '@material-ui/core/Container'
 import HomeIcon from '@material-ui/icons/Home'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 import { MDXProvider } from "@mdx-js/react"
@@ -48,9 +49,27 @@ const pre = props => {
 }
 
 const useStyles = makeStyles({
+  titleContainer: {
+    position: 'relative',
+    marginBottom: 75
+  },
+  titleBg: {
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    filter: "blur(4px)",
+    position: "absolute",
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0
+  },
   title: {
-    marginBottom: 75,
-    marginTop: 25
+    paddingBottom: 75,
+    paddingTop: 75,
+    marginTop: 25,
+    textShadow: "black 3px 3px 3px",
+    filter: "blur(0)"
   },
   link: {
     display: 'flex',
@@ -89,7 +108,8 @@ const PostCss = withStyles(theme => ({
     'img': {
       display: 'block',
       maxWidth: 600,
-      margin: 'auto'
+      margin: 'auto',
+      width: "100%"
     }
   }
 }))(() => null)
@@ -98,11 +118,13 @@ export default function BlogPost({ data }) {
   const classes = useStyles()
   const post = data.mdx
 
+  const image = post.image || post.frontmatter.image
+
   return <MDXProvider components={{
     img: props => props.className == 'gatsby-resp-image-image'
       ? <img {...props} />
       : <figure>
-        <span style={{position: "relative", display: "block", margin: "auto", maxWidth: 600}}>
+        <span style={{position: "relative", display: "block", margin: "auto", maxWidth: 600, width: "100%"}}>
           <MaterialLink href={props.src} target="_blank">
             <img {...props} />
           </MaterialLink>
@@ -130,9 +152,12 @@ export default function BlogPost({ data }) {
         {post.frontmatter.title}
       </Typography>
     </Breadcrumbs>
-    <Typography className={classes.title} variant="h4" align="center" display="block">
-      {post.frontmatter.title}
-    </Typography>
+    <Container className={classes.titleContainer}>
+      <Container style={{backgroundImage: `url(${image.childImageSharp.fluid.src})`}} className={classes.titleBg}></Container>
+      <Typography className={classes.title} variant="h4" align="center" display="block">
+        {post.frontmatter.title}
+      </Typography>
+    </Container>
     <MDXRenderer>{post.body}</MDXRenderer>
   </Layout></MDXProvider>
 }
@@ -151,6 +176,20 @@ export const query = graphql`
       body
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+      image {
+        childImageSharp {
+          fluid {
+            src
+          }
+        }
       }
     }
   }
