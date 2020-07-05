@@ -68,7 +68,6 @@ const Layout = ({ children, images }) => {
     [true]
   )
 
-
   return <ThemeProvider theme={theme}>
     <CssBaseline/>
     <GlobalCss />

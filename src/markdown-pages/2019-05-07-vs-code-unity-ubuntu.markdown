@@ -4,7 +4,7 @@ title: "Configurer VSCode pour Unity3D sur Ubuntu"
 date: 2019-05-07
 categories: tuto gamedev
 author: Knarfux
-image: ../../img/profile.png
+image: ../../img/vscode+unity.png
 ---
 
 Cela fait quelques années que je travaille avec un ordinateur portable avec **Ubuntu** pré-installer dessus.
@@ -17,7 +17,7 @@ Je dois donc faire du gamedev sur Ubuntu. *C'est déjà toute une aventure.*
 
 ## L'IDE
 
-L'éditeur que j'utilise le plus est 💕 ***Sublime Text*** 💕. Que ca soit du web, du scripting, de l'édition de texte ou l'écriture de ce blog, **JE VIS** Sublime Text.
+L'éditeur que j'utilise le plus est 💕 ***Sublime Text*** 💕. Que ça soit du web, du scripting, de l'édition de texte ou l'écriture de ce blog, **JE VIS** Sublime Text.
 
 *Bref*.
 

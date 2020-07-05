@@ -68,6 +68,7 @@ const useStyles = makeStyles({
     paddingBottom: 75,
     paddingTop: 75,
     marginTop: 25,
+    wordBreak: "break-word",
     textShadow: "black 3px 3px 3px",
     filter: "blur(0)"
   },

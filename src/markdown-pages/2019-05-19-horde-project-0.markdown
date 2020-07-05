@@ -39,7 +39,7 @@ Je ne pensais pas **DU TOUT** que cette feature allait prendre autant de temps �
 
 ## La suite
 
-**Dans l’immédiat**, je vais continuer dans ma lancée et implémenter une grosse partie de la *logique* des murs, telle que leur santé, leur destruction, les models alternatifs lors de leur endommagement, etc.
+**Dans l’immédiat**, je vais continuer dans ma lancée et implémenter une grosse partie de la *logique* des murs, telle que leur santé, leur destruction, les modèles alternatifs lors de leur endommagement, etc.
 
 Pour du moyen terme, eh bien... **j'en sais encore trop rien**, mais je *pense* que je passerai à d'autres bâtiments de la phase construction. A voir donc.
 

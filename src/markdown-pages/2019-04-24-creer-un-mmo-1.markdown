@@ -24,7 +24,7 @@ En local, j'utilise **[git-flow](https://github.com/petervanderdoes/gitflow-avh)
 
 La seule modification que j'ai apporté à la configuration de base, c'est changer la branche de production de *master* vers *staging*. Comme ça, les releases seront mergées directement en pré-production, et les mises en production se feront **seulement** via des PR.
 
-La "*gestion de projet*" se fera sur **[Taiga](https://taiga.io)**. C'est un issue tracker que j'aime bien, et je peux changer le status des stories depuis mes messages commit.
+La "*gestion de projet*" se fera sur **[Taiga](https://taiga.io)**. C'est un issue tracker que j'aime bien, et je peux changer le statuts des stories depuis mes messages commit.
 
 ## La suite
 

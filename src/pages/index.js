@@ -5,8 +5,6 @@ import Grid from '@material-ui/core/Grid'
 import PostCard from "../components/PostCard"
 import Layout from '../components/Layout'
 
-
-
 const IndexPage = ({ data }) => {
   const { allMdx: { edges, nodes } } = data
   

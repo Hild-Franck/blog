@@ -6,7 +6,7 @@ categories: blog update
 author: Knarfux
 image: ../../img/phoenix.jpg
 ---
-Techniquement, c'est une re-re-re-renaissance, puisque j'ai tenté de relancer ce blog une bonne centaine de fois, mais ma légendaire propension à ne pas finir la **MOINDRE** chose que j'entreprend finis par prendre le dessus.
+Techniquement, c'est une re-re-re-renaissance, puisque j'ai tenté de relancer ce blog une bonne centaine de fois, mais ma légendaire propension à ne pas finir la **MOINDRE** chose que j’entreprends finis par prendre le dessus.
 
 Faible vous dites ? Mais oui, vous avez tout à fait raison.
 
@@ -14,9 +14,9 @@ Mais bon, cette fois, je compte bien faire les choses différemment. Pour commen
 
 En plus, pour pas me décourager en essayant seulement d'écrire de gros articles qui prennent du temps en recherches/tests/écriture (faible, vous vous souvenez ?), il y aura bien plus d'articles courts, comme des *updates de projets*, des *partages de technos* sympas, etc...
 
-Bon, j'espère vraiment que cette fois c'est la bonne, parce que je lache mon blog, je lache **systématiquement** mes *autres* projets. Là, je me dis qu'en me "forçant" à tenir un blog pour y mettre des updates et des découvertes, ça m'aidera à tenir !
+Bon, j'espère vraiment que cette fois c'est la bonne, parce que je lâche mon blog, je lâche **systématiquement** mes *autres* projets. Là, je me dis qu'en me "forçant" à tenir un blog pour y mettre des updates et des découvertes, ça m'aidera à tenir !
 
-**Je me demande en combien de temps je vais lacher cette fois.** - *un optimiste, 2018*
+**Je me demande en combien de temps je vais lâcher cette fois.** - *un optimiste, 2018*
 
 Qu'est ce qu'on peut attendre comme contenu cette fois ci, du coup ?
 De ce coté là, pas trop de changements, il y aura:
@@ -26,6 +26,6 @@ De ce coté là, pas trop de changements, il y aura:
 
 C'est pas très diversifié, je vous l'accorde, mais je préfère faire peu de contenu mais intéressant que de bourrer du contenu écrit en 30 secondes (déjà que).
 
-Pour finir, le site a certes fait peau neuve, mais plusieurs changements de design vont avoir lieu très prochainement, notamment sur la présentation des posts en page d'acceuil, qui est pas "ouf" (c'est une façon polie de dire que c'est moche)
+Pour finir, le site a certes fait peau neuve, mais plusieurs changements de design vont avoir lieu très prochainement, notamment sur la présentation des posts en page d’accueil, qui est pas "ouf" (c'est une façon polie de dire que c'est moche)
 
 Je n'ai plus qu'à vous souhaiter une bonne lecture pour les prochains articles, et n'hésitez pas à me contacter pour toute question / suggestion / etc !

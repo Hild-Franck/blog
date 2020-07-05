@@ -4,7 +4,7 @@ title: "Nouvelle version de encyclopedia !"
 date: 2018-10-18
 categories: projects update
 author: Knarfux
-image: ../../img/profile.png
+imageUrl: https://images.pexels.com/photos/47805/library-book-reading-computers-47805.jpeg
 ---
 
 J'avais commencé il y a quasi un an un repo dans lequel je tentais de compiler les choses que j'apprenais, après les avoir synthétisées.
