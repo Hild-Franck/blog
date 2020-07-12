@@ -52,6 +52,8 @@ class TileMap():
                   pygame.draw.rect(gameDisplay, self.colors[tile], rectangle)
 ```
 
+### Dessiner les tiles
+
 Alors ! Le code est assez simple. J'ai mis les data des tiles dans une **variable de classe** `data`. Le `0` correspondra aux tiles qui ne seront pas dessines, le `1` aux tiles qui seront noires.
 
 Chaque tile fera 32px par 32px.
@@ -88,12 +90,12 @@ Dans cette méthode, j’itère a travers les data pour dessiner chaque tile :
   rectangle = pygame.Rect(x * TILE_SIZE, y * TILE_SIZE, TILE_SIZE, TILE_SIZE)
   ```
 
-Comme une tile fait 32px de long et large (`TILE_SIZE`), il faut que je dessine un rectangle tous les`TILE_SIZE` pixels. Sachant que **l'origine des rectangles** est sur le coin haut-gauche, multiplier les index par `TILE_SIZE` permet de déterminer **a partir de quel pixel il faut dessiner** chaque rectangle.
+Comme une tile fait 32px de long et large (`TILE_SIZE`), il faut que je dessine un rectangle tous les `TILE_SIZE` pixels. Sachant que **l'origine des rectangles** est sur le coin haut-gauche, multiplier les index par `TILE_SIZE` permet de déterminer **a partir de quel pixel il faut dessiner** chaque rectangle.
 
 ![tile drawing](../../img/tile-drawing.png)
 
 Pour finir, les valeurs contenues dans les sous-tableaux (les `0` et les `1` donc) servent d'index au tableau `colors`. Comme on n'affiche pas les tiles contenant un `0`, le `1` permet d'afficher une tile noire.
 
-Et voila ! Il suffit d'instancier `TileMap` et d'appeler `tilemap.draw()` dans la game loop pour afficher le foreground ! Yeah !
+Et voila ! Il suffit d'instancier `TileMap` et d'appeler `tilemap.draw()` dans **la game loop** pour afficher le foreground ! Yeah !
 
 La suite arrive !
