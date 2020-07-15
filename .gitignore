@@ -4,3 +4,4 @@ _draft/
 node_modules/
 .cache/
 public/
+.vscode/

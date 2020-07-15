@@ -19,6 +19,7 @@ module.exports = {
         name: `img`,
       },
     },
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-remark-prismjs`,
@@ -89,6 +90,7 @@ module.exports = {
       options: {
         extensions: [".md", ".markdown"],
         gatsbyRemarkPlugins: [
+          `gatsby-remark-videos`,
           {
             resolve: "gatsby-remark-copy-linked-files",
             options: {

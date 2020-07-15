@@ -108,7 +108,6 @@ const PostCss = withStyles(theme => ({
     },
     'img': {
       display: 'block',
-      maxWidth: 600,
       margin: 'auto',
       width: "100%"
     }
@@ -122,16 +121,20 @@ export default function BlogPost({ data }) {
   const image = post.image || post.frontmatter.image
 
   return <MDXProvider components={{
-    img: props => props.className == 'gatsby-resp-image-image'
-      ? <img {...props} />
-      : <figure>
-        <span style={{position: "relative", display: "block", margin: "auto", maxWidth: 600, width: "100%"}}>
-          <MaterialLink href={props.src} target="_blank">
-            <img {...props} />
-          </MaterialLink>
-        </span>
-        {props.title && <figcaption class="gatsby-resp-image-figcaption">{props.title}</figcaption>}
-      </figure>,
+    img: props => {
+      console.log(props);
+      
+      return props.className == 'gatsby-resp-image-image'
+        ? <img {...props} />
+        : <figure>
+          <span style={{position: "relative", display: "block", margin: "auto", maxWidth: 600, width: "100%"}}>
+            <MaterialLink href={props.src} target="_blank">
+              <img {...props} />
+            </MaterialLink>
+          </span>
+          {props.title && <figcaption class="gatsby-resp-image-figcaption">{props.title}</figcaption>}
+        </figure>
+    },
     a: MaterialLink,
     h2: props => <Typography {...props} variant="h5" component="h3" />,
     h3: props => <Typography {...props} variant="h6" component="h4" />,

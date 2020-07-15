@@ -98,4 +98,4 @@ Pour finir, les valeurs contenues dans les sous-tableaux (les `0` et les `1` don
 
 Et voila ! Il suffit d'instancier `TileMap` et d'appeler `tilemap.draw()` dans **la game loop** pour afficher le foreground ! Yeah !
 
-La suite arrive !
+Next, on va s'occuper de [notre personnage et de la gravite](/2020-07-15-platformer-part-2) !
