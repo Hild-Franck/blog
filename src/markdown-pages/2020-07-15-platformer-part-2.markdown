@@ -50,6 +50,8 @@ Nous allons essayer de recréer plus ou moins l'attraction terrestre. En gros, o
 
 Pour transcrire ça en code, c'est pas sorcier, il suffit d'appliquer une vitesse sur **la position y** du personnage.
 
+Pour rappel, l’équation de la vitesse est: **`vitesse = distance / temps`**. Ce que l'on veut savoir, c'est de **combien de pixel faut il bouger** a chaque frame pour être a une vitesse définie préalablement. Ce qui nous faut est donc la distance: **`distance = vitesse * temps`**
+
 Par exemple, en appliquant une **vitesse de 1px / frame**, notre personnage va se déplacer de **1px a chaque frame**.
 
 ### Delta time
@@ -79,12 +81,6 @@ Il faut donc **une vitesse constante a chaque frame**, et c'est la qu'intervient
 
 Le delta time est le nombre de millisecondes qui s'est écoulé entre la frame précédente et la frame en cours. C'est avec ce chiffre qu'on va pouvoir déterminer la distance en pixel dont on veut faire bouger notre personnage selon sa vitesse.
 
-En effet : **`vitesse = distance / temps`**
-
-On connaît la vitesse (déterminée préalablement dans une variable), et le temps, qui est le delta time.
-
-Donc : **`distance = vitesse * temps`**
-
 > **EXEMPLE:**
 >
 > On veut ajouter 2px a chaque frame. On fait donc :
@@ -113,19 +109,20 @@ class Character():
 
     def draw(self):
         global GAME_DISPLAY
-        pygame.draw.rect(gameDisplay, self.color, self.rectangle)
+        pygame.draw.rect(GAME_DISPLAY, self.color, self.rectangle)
 
     def update(self):
         self.__apply_gravity()
         self.rectangle = self.rectangle.move(self.x_speed, self.y_speed)
     
     def __apply_gravity(self):
+        global GRAVITATION_FORCE, DELTA_TIME
         self.y_speed = GRAVITATION_FORCE * DELTA_TIME
   
 character = Character()
 ```
 
-Je gère la gravité dans une méthode privée `__apply_gravity`, et j'utilise la variable `GRAVITATION_FORCE` pour contrôler la vitesse de la chute.
+Je gère la gravité dans une méthode privée `__apply_gravity()`, et j'utilise la variable `GRAVITATION_FORCE` pour contrôler la vitesse de la chute.
 
 > **ATTENTION:**
 >
@@ -167,7 +164,7 @@ class Character():
 
     def draw(self):
         global GAME_DISPLAY
-        pygame.draw.rect(gameDisplay, self.color, self.rectangle)
+        pygame.draw.rect(GAME_DISPLAY, self.color, self.rectangle)
 
     def update(self):
         if not self.starting_fall:
@@ -177,6 +174,7 @@ class Character():
         self.rectangle = self.rectangle.move(self.x_speed, self.y_speed)
     
     def __apply_gravity(self):
+        global GRAVITATION_FORCE, DELTA_TIME
         delta_fall_time = (pygame.time.get_ticks() - self.starting_fall) * 0.0035
         self.y_speed = GRAVITATION_FORCE * DELTA_TIME * delta_fall_time
 ```
@@ -184,6 +182,11 @@ class Character():
 Et le résultat:
 
 ![](../../img/character-falling.mp4)
+
+> **NOTE:**
+>
+> Ici, l’accélération est linéaire, puisqu'on multiplie le delta time par une constante. La fonction qui modélise l’évolution de la vitesse est donc: `y = constante * t`.
+> Cependant, on peut utiliser une autre fonction qu'une fonction linéaire !
 
 A partir de la, on peut commencer a modifier un peu toutes ces valeurs jusqu’à tomber sur un bon feeling, alors faut pas hésiter a expérimenter !
 
