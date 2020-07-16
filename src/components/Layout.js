@@ -17,6 +17,13 @@ const GlobalCss = withStyles(theme => ({
     '.MuiTypography-h6': {
       marginTop: 30,
       fontWeight: "bold"
+    },
+    blockquote: {
+      background: theme.palette.background.paper,
+      padding: 10,
+      borderLeft: `5px solid ${theme.palette.secondary.dark}`,
+      marginTop: 50,
+      marginBottom: 50
     }
   }
 }))(() => null)
