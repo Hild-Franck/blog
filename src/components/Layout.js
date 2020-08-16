@@ -6,6 +6,8 @@ import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import { makeStyles, withStyles } from '@material-ui/core/styles'
 
+import SocialMedias from './SocialMedias'
+
 const GlobalCss = withStyles(theme => ({
   '@global': {
     'strong, b': {
@@ -36,7 +38,7 @@ const useStyles = makeStyles({
   },
   header: {
     height: 200,
-    marginBottom: 25,
+    marginBottom: 10,
     position: "relative"
   },
   headerImage: {
@@ -52,6 +54,9 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "end"
+  },
+  icon: {
+    width: 50
   }
 })
 
@@ -88,6 +93,7 @@ const Layout = ({ children, images }) => {
         </Grid>
       </Grid>
     </Box>
+    <SocialMedias />
     <Box className={classes.main}>
       {children}
     </Box>
