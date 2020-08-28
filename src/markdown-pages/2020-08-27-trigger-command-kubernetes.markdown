@@ -27,7 +27,7 @@ while :; do
 done
 ```
 
-Comme promis, c'est très simple ! `cat /dev/null | nc -l -p 6060` permet de démarrer le serveur TCP sur le port `9000`, ce qui **bloque le process** et empêche de passer au pipe suivant.
+Comme promis, c'est très simple ! `cat /dev/null | nc -l -p 9000` permet de démarrer le serveur TCP sur le port `9000`, ce qui **bloque le process** et empêche de passer au pipe suivant.
 
 Lorsque ce dernier reçoit une requête, il répond le contenu de `/dev/null` (c'est a dire rien), s’arrête, ce qui permet de passer au pipe qui le suit, c'est a dire la commande que l'on veut exécuter.
 
@@ -66,11 +66,11 @@ Pour ça, on fait passer ce que le client envoi dans une condition, et on exécu
 
 ```shell
 while :; do
-  cat /dev/null | nc -l -p 6060 | xargs -I % sh -c 'if [[ % == "$(TOKEN)" ]]; then my_command; fi';
+  cat /dev/null | nc -l -p 9000 | xargs -I % sh -c 'if [[ % == "$(TOKEN)" ]]; then my_command; fi';
 done
 ```
 
-`nc -l -p 6060` pipe dans `stdin` le contenu de la requête. On récupère ce contenu grâce a `xargs` et on le place dans le symbole `%`.
+`nc -l -p 9000` pipe dans `stdin` le contenu de la requête. On récupère ce contenu grâce a `xargs` et on le place dans le symbole `%`.
 
 Grâce a `sh -c`, on exécute notre commande, précédée de la vérification du token `if [[ % == "$(TOKEN)" ]]`
 
