@@ -38,6 +38,7 @@
     "gatsby-plugin-google-analytics": "^2.3.13",
     "gatsby-plugin-material-ui": "^2.1.9",
     "gatsby-plugin-mdx": "^1.2.21",
+    "gatsby-plugin-react-helmet": "^3.3.10",
     "gatsby-plugin-sharp": "^2.6.16",
     "gatsby-plugin-styled-components": "^3.3.9",
     "gatsby-remark-copy-linked-files": "^2.3.10",
@@ -52,6 +53,7 @@
     "prism-themes": "^1.4.0",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0"
   }
 }

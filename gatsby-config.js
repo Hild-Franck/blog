@@ -1,8 +1,12 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: `http://localhost:9000`,
+    siteUrl: `https://knarfux.fr`,
+    url: `https://knarfux.fr`,
     title: `Knarfux blog`,
-    description: `The blog of Knarfux`
+    titleTemplate: `Knarfux blog | %s`,
+    description: `The blog of Knarfux`,
+    image: `../../img/profile.png`,
+    twitterUsername: "@knarfux",
   },
   plugins: [
     {
@@ -32,6 +36,7 @@ module.exports = {
         name: `img`,
       },
     },
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

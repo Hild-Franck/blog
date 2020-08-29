@@ -19,6 +19,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Highlight, { defaultProps } from 'prism-react-renderer'
 
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
 
 const pre = props => {
   const className = props.children.props.className || ''
@@ -146,6 +147,12 @@ export default function BlogPost({ data }) {
     table: props => <TableContainer component={Paper}><Table {...props} /></TableContainer>,
     pre
   }}><Layout images={data.normal}>
+    <SEO
+      title={post.frontmatter.title}
+      description={post.frontmatter.description || post.excerpt || 'nothin’'}
+      image={image.childImageSharp.fluid.src}
+      article
+    />
     <PostCss />
     <Breadcrumbs aria-label="breadcrumb">
       <MaterialLink component={Link} color="inherit" to="/" className={classes.link}>

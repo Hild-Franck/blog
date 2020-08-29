@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid'
 
 import PostCard from "../components/PostCard"
 import Layout from '../components/Layout'
+import SEO from '../components/seo'
 
 const IndexPage = ({ data }) => {
   const { allMdx: { edges, nodes } } = data
@@ -14,6 +15,7 @@ const IndexPage = ({ data }) => {
   })
 
   return <Layout images={data.normal}>
+    <SEO />
     <Grid container justify="space-evenly" alignItems="stretch">{Posts}</Grid>
   </Layout>
 }
